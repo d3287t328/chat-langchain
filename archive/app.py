@@ -33,7 +33,7 @@ def chat(inp, history, agent):
         history.append((inp, "Please paste your OpenAI key to use"))
         return history, history
     print("\n==== date/time: " + str(datetime.datetime.now()) + " ====")
-    print("inp: " + inp)
+    print(f"inp: {inp}")
     history = history or []
     output = agent({"question": inp, "chat_history": history})
     answer = output["answer"]

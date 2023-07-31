@@ -121,7 +121,7 @@ Answer in Markdown:"""
 def _get_chat_history(chat_history: List[Tuple[str, str]]):
     buffer = ""
     for human_s, ai_s in chat_history:
-        human = f"Human: " + human_s
-        ai = f"Assistant: " + ai_s
+        human = f"Human: {human_s}"
+        ai = f"Assistant: {ai_s}"
         buffer += "\n" + "\n".join([human, ai])
     return buffer
